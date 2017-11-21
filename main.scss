@@ -1,0 +1,26 @@
+$primarty-color: green;
+$font-stack: sans-serif;
+$padding: 48px;
+
+
+@mixin font-fl($font){
+	&:after{
+		@if (type-of($font) != string){
+			content: 'Hello Mr. Vijay How R You!';
+		} @else {
+			content: 'Condition got failed';
+		}
+	}
+}
+
+
+/*h2{
+	@include font-fl(sans-serif);
+}*/
+h1{
+	@if ($padding <= 20px){
+		padding: $padding;
+	} @else {
+		padding: $padding / 2;
+	}
+}
